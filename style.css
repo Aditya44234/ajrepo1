@@ -1,0 +1,831 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Londrina+Shadow&family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Londrina+Shadow&family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    /* height: 1000px; */
+
+
+}
+
+
+body,html{
+    /* background: url("../bg/Flux_Dev_A_subtle_highcontrast_black_and_white_background_with_0\ \(1\).jpeg")no-repeat center center/cover; */
+    /* background: linear-gradient(120deg,white ,black); */
+    background-color: #fff;
+    scroll-behavior:smooth;
+
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    background-color: black;
+    z-index: 1000;
+
+}
+
+
+
+.logo{
+    width: 25%;
+    display: flex;
+    text-align: center;
+    color: white;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    /* padding:4px  0px; */
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: "Merienda", serif;
+}
+
+
+
+.logo img{
+    width: 100px;
+    /* height: 150px; */
+    /* height: 5.1rem; */
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 10px rgb(255, 251, 251); */
+    background-color: black;
+
+}
+
+
+.logo .logoName {
+    font-family: "Quicksand", serif;
+    /* width: 100%; */
+    font-size: 20px;
+
+}
+
+
+.logo .logoName span{
+    color: white;
+
+}
+
+
+.navlist{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 2px;
+    justify-content: center;
+    margin-right: 20%;
+}
+
+
+.navlist .list {
+    display: none;
+    transition:  0.5s ease-in-out;
+
+}
+
+.navlist .list.active{
+    transform: translateX(10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    /* transition: all 0.5s ease-in-out; */
+    transition:  0.5s ease-in-out;
+
+    top: 2%;
+    margin-top: 3.5%;
+    padding:44px 32px;
+    right: 0%;
+    color: rgb(248, 248, 248);
+    background-color: black;
+    border-radius: 10%;
+    align-items: end;
+    z-index: 1000;
+    /* display: none; */
+}
+
+
+.cover {
+    position: absolute;
+    width: 70%;
+}
+
+
+
+.navlist .list .li i {
+    color:white;
+
+    font-size: 28px;
+}
+
+
+
+.navlist .list .li a {
+    color:white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Quicksand", serif;
+    font-size: 25px;
+    font-weight: 500;
+    transition: 0.4s;
+
+
+}
+
+
+.navlist .list .li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 10px; */
+    /* top: 0px; */
+}
+
+.leftText{
+    color: #fff;
+    background-color: rgb(206, 40, 228);
+    padding: 10px;
+    border-radius: 360px;
+    border: 4px solid white;
+    font-family: "Ubuntu",serif;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.leftText:hover{
+    background-color:magenta;
+    color: #fff;
+    border: 3px solid black;
+}
+
+
+.gamesBtn{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: fixed;
+    right: 0%;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px  rgba(248, 241, 241, 0.9);
+    z-index: 1000;
+    /* opacity: 0.5; */
+}
+
+.gamesBtn:hover{
+    background-color: wheat;
+}
+
+#menu-icon{
+    font-size: 25px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 360px;
+}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Game Selection*/
+
+.games{
+    width: 100%;
+    padding: 8%;
+}
+
+
+.games .gamesText{
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    /* margin: auto; */
+    font-family:bolder;
+    font-family: "Poppins", serif;
+    text-shadow: -2px -2px 3px  rgba(0, 0, 0, 0.2);
+    color:black;
+    padding-bottom: 10px;
+    /* word-wrap: normal; */
+    max-width: 100%;
+    font-weight: 700;
+     margin-top: 9%;
+    /* max-height: calc(100% - 1000px); */
+}
+
+.gamesList{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding-top: 60px;
+    height: 100%;
+    width: 100%;
+}
+
+.gamesList li img{
+    width: 250px;
+    box-shadow: 10px 10px 5px rgba(22, 13, 13, 0.7);
+    border-radius: 10%;
+    transition: 0.5s;
+}
+
+.gamesList li img:hover{
+    /* transform: scaleX(1.07); */
+    transform: scale(1.08);
+    /* box-shadow: -10px -10px 5px rgba(22, 13, 13, 0.7); */
+    /* box-shadow: -5px -5px 5px rgba(22, 13, 13, 0.7); */
+    border: 3px solid yellow;
+
+}
+
+
+.gamesList li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.gamesList li .gameImgBtn{
+    /* font-family:sans-serif ; */
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+    font-size: 35px;
+    width: 130px;
+    border-radius: 360px;
+    border: 4px solid black;
+
+}
+
+.gamesList li .gameImgBtn:hover{
+    color: red;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* BGMI TradeHub */
+
+.bgmiHub{
+    padding: 30px;
+    margin-top: 100px;
+}
+
+
+.leftTop{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+    text-align: start;
+    /* padding: 10px; */
+    font-family: "Quicksand", serif;
+    /* position: fixed; */
+    top: 10%;
+}
+
+.leftTop img{
+    border-radius: 20px;
+}
+
+.leftTop .toplefttext  .chngeHub a{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 5px;
+    gap: 5px;
+    font-size: 15px;
+}
+
+.leftTop .toplefttext  .chngeHub a p{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.leftTop .toplefttext  .chngeHub a img{
+    width: 25px;
+    cursor: pointer;
+
+}
+
+
+/* displayed Id's */
+
+
+.container {
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 150px;
+    padding: 30px;
+    margin-top: 9%;
+    /* align-items: center; */
+
+}
+
+.item{
+    text-align: center;
+    border-radius: 30%; 
+    /* /* margin: 40%; */
+}
+
+.container .item a img{
+    width: 400px;
+    height: 200px;
+    border-radius: 30px;
+    /* margin: 40px; */
+    transition: 0.5s;
+    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+
+.container .item  a button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px ;
+    cursor: pointer;
+    font-weight: 800;
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    transition: 0.4s;
+    margin: auto;
+    margin-top: 30px;
+
+
+}
+
+.container .item  a button:hover{
+    background-color: #fff;
+    color: black;
+
+}
+
+.container .item a img:hover{
+    transform: scale(1.06);
+    
+}
+
+
+/* ID :-- 1 */
+
+
+
+.details{
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8%;
+    align-items: center;
+    font-family: "Quicksand", serif;
+}
+
+.moreids{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.moreids img{
+    width: 500px;
+    border-radius: 30px;
+    /* border: 5px solid black; */
+    box-shadow:1px 1px 10px  rgba(0, 0, 0, 0.2) ;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.moreids img:hover{
+    transform: scaleX(1.05);
+}
+
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text img{
+    width: 50px;
+    cursor: pointer;
+    background-color: white;
+    color: white;
+    border-radius: 360px;
+}
+
+.text img:hover{
+    background-color: rgb(207, 201, 201);
+}
+
+.Iddescription{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+
+.Iddescription  h1{
+    /* text-align: start; */
+    /* background-color: ; */
+    position: relative;
+    color: black;
+    width: 20%;
+    border-radius: 30px;
+    padding:5px  20px;
+    border: 3px solid black;
+    box-shadow: -10px -10px 5px rgba(0, 0, 0, 0.6);
+
+}
+.Iddescription .description{
+    width: 950px;
+    height: 550px;
+    border: 4px solid black;
+    box-shadow: -10px -10px 5px rgba(0, 0, 0, 0.9);
+    border-radius: 30px;
+    padding: 50px;
+    
+}
+
+
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.btns button{
+    padding:15px  35px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border: 3px solid black;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+
+.btns button:hover{
+    transform: scale(1.04);
+    
+}
+
+.btns :first-child{
+    background-color:rgb(57, 174, 57);
+    color: white;
+}
+
+.btns :first-child:hover{
+    background-color:#fff;
+    color: rgb(57, 174, 57);
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Sell Id */
+
+
+.sellDes {
+    padding: 30px;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+}
+
+
+
+.sellDes .part1{
+    padding: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 30px;
+    /* line-height: 30px; */
+
+}
+
+.sellDes .part1 .sellText{
+    font-style: italic;
+    font-size: 45px;
+
+}
+
+.sellDes .chatText{
+    font-style: italic;
+    font-size: 45px;
+    padding: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    /* margin: auto; */
+}
+
+.sellDes .chatText span{
+    font-weight: 700;
+}
+
+
+
+
+
+.sellDes .part1 button{
+    font-size: 30px;
+    padding:10px  25px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(26, 19, 19);
+    color: #fff;
+    font-weight: 600;
+    font-family: "Quicksand", serif;
+}
+
+.sellDes .part1 button:hover{
+    color: red;
+}
+
+
+
+.sellDes .sellBtn {
+    margin: auto;
+    background-color: rgb(206, 62, 206);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: "Quicksand", serif;
+    font-weight: 600;
+    border: 3px solid black;
+}
+
+
+.sellDes .sellBtn:hover{
+    color: beige;
+    background-color: rgb(140, 33, 140);
+}
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* EMI Option */
+
+.emi{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10%;
+    gap: 40px;
+}
+
+.emi .btn button{
+    font-size: 40px;
+    padding: 8px 45px;
+    border-radius: 15px;
+    background-color: #fff;
+    color: black;
+    font-weight: 800;
+    box-shadow: -10px -10px 2px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    font-family: "Quicksand", serif;
+
+}
+
+
+.emi .stepBox{
+    border: 4px solid black;
+    box-shadow: 0px 0px 5px rgba(240, 232, 232, 0.2);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+}
+
+
+.emi .stepBox ul{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+    flex-direction: column;
+
+}
+
+.emi .stepBox ul li p{
+    font-size: 40px;
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+
+
+}
+
+
+.emi .stepBox button{
+    padding: 10px 30px;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(8, 255, 8);
+    border-radius: 30px;
+    color: white;
+    font-size: 35px;
+    border: 4px solid black;
+    font-weight: 700;
+    font-family: "Quicksand", serif;
+    cursor: pointer;
+
+}
+
+
+
+.emi .stepBox button:hover{
+    color: red;
+}
+
+
+
+
+/* Lets make it responsive */
+
+
+
+
+#parent{
+
+    /* background-color: grey; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+
+.child{
+    margin-top: 30px;
+    display: inline-block;
+}
+
+
+
+ 
+
+
+@media (max-width:562px){
+    .logo{
+        width: 20%;
+        gap: 5px;
+    }
+
+    .games .gamesText{
+        font-size: 35px;
+        margin-top: 30%;
+
+    }
+
+    .gamesList li img{
+        width: 230px;
+
+    }
+
+    .leftText{
+        display: none;
+    }
+
+    .bgmiHub{
+        padding: 20px;
+    }
+
+    .leftTop{
+        gap: 20px;
+    }
+
+    .leftTop img{
+        width: 300px;
+    }
+
+    .leftTop .toplefttext h1{
+        font-size: 20px;
+
+    }
+
+    
+   .details{
+    width: 100%;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin-top: 8%;
+    align-items: center;
+    font-family: "Quicksand", serif;
+    gap: 50px;
+   }
+
+   .Iddescription{
+    margin-top: 40%;
+    gap: 25px;
+    width: 100%;
+    
+   }
+
+   .Iddescription h1{
+    text-align: center;
+    width: 100%;
+   }
+   
+
+
+   .Iddescription .description{
+    width: 500px;
+    height: 450px;
+    border: 4px solid black;
+    box-shadow: -10px -10px 5px rgba(0, 0, 0, 0.9);
+    border-radius: 30px;
+    padding: 20px;
+    
+}
+
+.moreids{
+    margin: auto;
+    padding: 30px;
+}
+
+.moreids img{
+    width: 500px;
+}
+
+
+
+.moreids .text img{
+    width: 50px;
+
+}
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
